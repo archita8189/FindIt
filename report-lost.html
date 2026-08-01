@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Lost Item | FindIt</title>
+
+    <link rel="stylesheet" href="../css/dashboard1.css">
+    <link rel="stylesheet" href="../css/report-lost.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="../images/logo3.png" alt="FindIt">
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard1.html" data-nav="dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="browse-items2.html" data-nav="browse">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Browse Items
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="report-lost.html" data-nav="reports">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Report Lost
+                </a>
+            </li>
+
+            <li>
+                <a href="report-found.html" data-nav="found">
+                    <i class="fa-solid fa-hand-holding"></i>
+                    Report Found
+                </a>
+            </li>
+
+            <li>
+                <a href="my-reports.html" data-nav="my-reports">
+                    <i class="fa-solid fa-folder-open"></i>
+                    My Reports
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html" data-nav="settings">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <button class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search anything...">
+
+            </div>
+
+            <div class="top-right">
+
+                <div class="notification">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>3</span>
+
+                </div>
+
+               <div class="profile-dropdown">
+
+                    <div class="profile" id="profileBtn">
+
+                        <img src="../images/avatar.png" alt="Profile">
+
+                        <div>
+                            <h4 id="username">Akshat</h4>
+                            <small>User</small>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+
+                        <a href="#"><i class="fa-solid fa-user"></i> My Profile</a>
+                        <a href="#"><i class="fa-solid fa-folder-open"></i> My Reports</a>
+                        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                        <a href="#"><i class="fa-solid fa-circle-question"></i> Help & Support</a>
+
+                        <hr>
+
+                        <a href="#" class="logout">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div> 
+
+            </div>
+
+        </header>
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <div class="page-header">
+
+            <div class="page-title">
+
+                <div class="page-icon">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <div>
+
+                    <h1>Report Lost Item</h1>
+
+                    <p>
+                        Describe your lost item so others can help you find it.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= CONTENT GRID ================= -->
+
+        <div class="report-grid">
+
+            <!-- ================= LEFT COLUMN ================= -->
+
+            <div class="report-main">
+
+                <!-- STEP PROGRESS -->
+
+                <div class="stepper">
+
+                    <div class="step active">
+
+                        <div class="circle">1</div>
+
+                        <span>Item Details</span>
+
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="step">
+
+                        <div class="circle">2</div>
+
+                        <span>Location</span>
+
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="step">
+
+                        <div class="circle">3</div>
+
+                        <span>Images</span>
+
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="step">
+
+                        <div class="circle">4</div>
+
+                        <span>Contact</span>
+
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="step">
+
+                        <div class="circle">5</div>
+
+                        <span>Review</span>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= ITEM INFORMATION ================= -->
+
+                <div class="form-card">
+
+                    <div class="card-title">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                        <h2>Item Information</h2>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>
+                                Item Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="e.g. Black Backpack">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Category
+                                <span>*</span>
+                            </label>
+
+                            <select>
+
+                                <option>Select Category</option>
+
+                                <option>Electronics</option>
+
+                                <option>Accessories</option>
+
+                                <option>Bags</option>
+
+                                <option>Documents</option>
+
+                                <option>Clothing</option>
+
+                                <option>Books</option>
+
+                                <option>Others</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Brand</label>
+
+                            <input
+                                type="text"
+                                placeholder="e.g. Nike">
+
+                        </div>
+                                                <div class="input-group">
+
+                            <label>Color</label>
+
+                            <input
+                                type="text"
+                                placeholder="e.g. Black">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Model / Identifier</label>
+
+                            <input
+                                type="text"
+                                placeholder="Model, Roll No., Serial No.">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>
+                                Date Lost
+                                <span>*</span>
+                            </label>
+
+                            <input type="date">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Approx Time</label>
+
+                            <input type="time">
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group full-width">
+
+                        <label>
+
+                            Description
+
+                            <span>*</span>
+
+                        </label>
+
+                        <textarea
+                            rows="6"
+                            maxlength="500"
+                            placeholder="Describe your lost item with as much detail as possible... Mention colour, brand, size, unique marks, stickers, scratches, contents etc."></textarea>
+
+                        <small>0 / 500 Characters</small>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= LOCATION DETAILS ================= -->
+
+                <div class="form-card">
+
+                    <div class="card-title">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <h2>Location Details</h2>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>
+
+                                Location Lost
+
+                                <span>*</span>
+
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Library, Cafeteria, Hostel...">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Building</label>
+
+                            <input
+                                type="text"
+                                placeholder="Block A">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Floor</label>
+
+                            <select>
+
+                                <option>Select Floor</option>
+
+                                <option>Ground Floor</option>
+
+                                <option>1st Floor</option>
+
+                                <option>2nd Floor</option>
+
+                                <option>3rd Floor</option>
+
+                                <option>4th Floor</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Room Number</label>
+
+                            <input
+                                type="text"
+                                placeholder="A-204">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>City</label>
+
+                            <input
+                                type="text"
+                                placeholder="Kanpur">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Landmark</label>
+
+                            <input
+                                type="text"
+                                placeholder="Near Main Gate">
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group full-width">
+
+                        <label>Additional Location Details</label>
+
+                        <textarea
+                            rows="4"
+                            placeholder="Any additional location details..."></textarea>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= MAP PLACEHOLDER ================= -->
+
+                <div class="form-card">
+
+                    <div class="card-title">
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        <h2>Map Location</h2>
+
+                    </div>
+
+                    <div class="map-placeholder">
+
+                        <i class="fa-solid fa-map"></i>
+
+                        <h3>Select Location on Map</h3>
+
+                        <p>
+
+                            Google Maps integration will appear here.
+
+                        </p>
+
+                    </div>
+
+                </div>
+                                <!-- ================= IMAGE UPLOAD ================= -->
+
+                <div class="form-card">
+
+                    <div class="card-title">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        <h2>Upload Images</h2>
+
+                    </div>
+
+                    <div class="upload-area" id="uploadArea">
+
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        <h3>Drag & Drop Images Here</h3>
+
+                        <p>or click to browse files</p>
+
+                        <small>
+                            JPG, PNG, JPEG • Maximum 5 Images
+                        </small>
+
+                        <input
+                            type="file"
+                            id="imageUpload"
+                            multiple
+                            accept="image/*"
+                            hidden>
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                            onclick="document.getElementById('imageUpload').click()">
+
+                            Choose Images
+
+                        </button>
+
+                    </div>
+
+                    <div class="image-preview" id="imagePreview">
+
+                        <!-- JS Preview -->
+
+                    </div>
+
+                </div>
+
+                <!-- ================= REWARD ================= -->
+
+                <div class="form-card">
+
+                    <div class="card-title">
+
+                        <i class="fa-solid fa-gift"></i>
+
+                        <h2>Reward (Optional)</h2>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>Reward Amount</label>
+
+                            <input
+                                type="number"
+                                placeholder="500">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Currency</label>
+
+                            <select>
+
+                                <option>₹ INR</option>
+
+                                <option>$ USD</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= CONTACT ================= -->
+
+                <div class="form-card">
+
+                    <div class="card-title">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <h2>Contact Information</h2>
+
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+
+                            <label>Phone Number</label>
+
+                            <input
+                                type="tel"
+                                placeholder="+91 XXXXX XXXXX">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Email Address</label>
+
+                            <input
+                                type="email"
+                                placeholder="example@email.com">
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Preferred Contact</label>
+
+                            <select>
+
+                                <option>Phone Call</option>
+
+                                <option>WhatsApp</option>
+
+                                <option>Email</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Best Time to Contact</label>
+
+                            <select>
+
+                                <option>Morning</option>
+
+                                <option>Afternoon</option>
+
+                                <option>Evening</option>
+
+                                <option>Anytime</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= BUTTONS ================= -->
+
+                <div class="form-actions">
+
+                    <button class="secondary-btn">
+
+                        <i class="fa-regular fa-floppy-disk"></i>
+
+                        Save Draft
+
+                    </button>
+
+                    <button class="primary-btn">
+
+                        Next : Review Report
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- ================= RIGHT SIDEBAR ================= -->
+
+            <aside class="report-sidebar">
+
+                <!-- AI Tips -->
+
+                <div class="side-card">
+
+                    <div class="side-title">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <h3>AI Match Tips</h3>
+
+                    </div>
+
+                    <ul>
+
+                        <li>✔ Mention brand name</li>
+
+                        <li>✔ Mention colour</li>
+
+                        <li>✔ Add unique marks</li>
+
+                        <li>✔ Upload clear photos</li>
+
+                        <li>✔ Enter exact location</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Quality -->
+
+                <div class="side-card">
+
+                    <div class="side-title">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <h3>Report Quality</h3>
+
+                    </div>
+
+                    <div class="quality-circle">
+
+                        <h2>82%</h2>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div class="progress-fill"></div>
+
+                    </div>
+
+                    <p>
+
+                        More details improve AI matching.
+
+                    </p>
+
+                </div>
+
+                <!-- Security -->
+
+                <div class="side-card">
+
+                    <div class="side-title">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <h3>Privacy & Security</h3>
+
+                    </div>
+
+                    <p>
+
+                        Your personal information is encrypted and
+                        only shared when necessary during recovery.
+
+                    </p>
+
+                </div>
+
+                <!-- Help -->
+
+                <div class="side-card">
+
+                    <div class="side-title">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <h3>Need Help?</h3>
+
+                    </div>
+
+                    <p>
+
+                        support@findit.com
+
+                    </p>
+
+                    <button class="secondary-btn">
+
+                        Contact Support
+
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/report-lost.js"></script>
+
+</body>
+
+</html>

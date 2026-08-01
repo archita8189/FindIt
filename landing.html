@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIt | Lost & Found Platform</title>
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="../css/landing.css">
+   
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+            
+            <!-- Logo -->
+            <div class="logo">
+            <a href="landing.html">
+            <img src="../images/logo3.png   " alt="FindIt Logo">
+            </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="report-lost.html">Report Lost</a></li>
+                <li><a href="report-found.html">Report Found</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+
+           <div class="nav-buttons">
+
+            <a href="business.html" class="business-btn">
+                <i class="fa-solid fa-building"></i>
+                For Organizations
+            </a>
+
+            <button class="login-btn"
+                onclick="window.location.href='login.html'">
+                Login
+            </button>
+
+            <button class="register-btn"
+            onclick="window.location.href='login.html?mode=register'">
+                Register
+            </button>
+
+        </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Lost Something?<br>
+                <span>FindIt Helps You Get It Back.</span>
+            </h1>
+
+            <p>
+                Report lost items, browse found items, and reconnect
+                with your belongings quickly and securely.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn"
+                    onclick="window.location.href='report-lost.html'">
+                    Report Lost
+                </button>
+
+                <button class="secondary-btn"
+                    onclick="window.location.href='browse.html'">
+                    Browse Items
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="../images/hero1.png" alt="FindIt Illustration">
+        </div>
+
+    </section>
+
+<!-- ================= WHY CHOOSE FINDIT ================= -->
+<section id="features" class="features reveal">
+
+    <h2>Why Choose FindIt?</h2>
+    <p class="section-subtitle">
+        A smarter, faster, and more secure way to manage lost & found items.
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Secure Reporting</h3>
+            <p>
+                Every lost and found report is securely stored, ensuring privacy,
+                reliability, and easy access whenever needed.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Smart Search</h3>
+            <p>
+                Quickly locate items using intelligent search filters such as
+                category, location, date, and keywords.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3>Easy Tracking</h3>
+            <p>
+                Follow every report from submission to successful recovery through
+                a simple and organized tracking system.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+            <h3>Built for Organizations</h3>
+            <p>
+                Perfect for schools, colleges, offices, hospitals, libraries,
+                hotels, and other institutions of every size.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="how-it-works" class="how-it-works reveal">
+
+    <div class="section-title">
+        <span class="badge">HOW IT WORKS</span>
+
+        <h2>How FindIt Works</h2>
+
+        <p>
+            Recover your lost belongings in just four simple steps.
+        </p>
+    </div>
+
+    <div class="work-grid">
+
+        <!-- Step 1 -->
+        <div class="work-card">
+            <div class="step-circle">1</div>
+
+            <img src="../images/report.png" alt="Report">
+
+            <h3>Report</h3>
+
+            <p>
+                Submit a lost or found item with all the necessary
+                details and images.
+            </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="work-card">
+            <div class="step-circle">2</div>
+
+            <img src="../images/search.png" alt="Search">
+
+            <h3>Search</h3>
+
+            <p>
+                Browse listings or use smart filters to find possible
+                matches quickly.
+            </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="work-card">
+            <div class="step-circle">3</div>
+
+            <img src="../images/match.png" alt="Match">
+
+            <h3>Match</h3>
+
+            <p>
+                Our smart system matches items and notifies the right
+                people.
+            </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="work-card">
+            <div class="step-circle">4</div>
+
+            <img src="../images/recover.png" alt="Recover">
+
+            <h3>Recover</h3>
+
+            <p>
+                Verify ownership and securely claim your item.
+                Safe, simple and reliable.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+    <div class="about-left reveal">
+
+        <span class="about-tag">
+            ABOUT FINDIT
+        </span>
+
+        <h2>
+            A Smarter Way to Manage Lost & Found
+        </h2>
+
+        <p>
+            FindIt is a modern Lost & Found platform that helps individuals and
+            organizations report, search, match, and recover lost belongings
+            quickly and securely.
+        </p>
+
+        <p>
+            Whether it's a university, school, office, hospital, library, hotel,
+            or corporate campus, FindIt simplifies the entire recovery process
+            through an intuitive and centralized system.
+        </p>
+
+        <a href="business.html" class="about-btn">
+            Explore For Organizations
+        </a>
+
+    </div>
+
+    <div class="about-right reveal">
+
+        <div class="about-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Community Driven</h3>
+            <p>Helping people reconnect with their belongings.</p>
+        </div>
+
+        <div class="about-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Secure Platform</h3>
+            <p>Safe reporting and verified ownership process.</p>
+        </div>
+
+        <div class="about-card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Built for Organizations</h3>
+            <p>Perfect for schools, offices, hospitals and campuses.</p>
+        </div>
+
+        <div class="about-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Fast Recovery</h3>
+            <p>Find and claim lost items faster than ever.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="help" class="help">
+
+    <span class="help-tag">HELP CENTER</span>
+
+    <h2>Need Help?</h2>
+
+    <p>
+        Have questions or facing any issues while using FindIt?
+        Our support team is here to help you.
+    </p>
+
+    <div class="help-info">
+
+        <div class="help-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email Us</h3>
+            <a href="mailto:support@findit.in">
+                support@findit.in
+            </a>
+        </div>
+
+        <div class="help-card">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Call Us</h3>
+            <a href="tel:+919876543210">
+                +91 98765 43210
+            </a>
+        </div>
+
+        <div class="help-card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Support Hours</h3>
+            <p>Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ===========================================================
+                        PREMIUM FOOTER
+=========================================================== -->
+
+<footer class="landing-footer">
+
+    <div class="footer-container">
+
+        <!-- ================= LEFT SECTION ================= -->
+
+        <div class="footer-about">
+
+            <img src="../images/logo3.png" alt="FindIt brand logo showing two map markers and a winding path representing finding lost items" class="footer-logo">
+
+            <p>
+                FindIt helps students and organizations reconnect with
+                their lost belongings using AI-powered smart matching.
+            </p>
+
+            <div class="footer-badges">
+
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure Platform
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-bolt"></i>
+                    AI Powered
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-check-circle"></i>
+                    Trusted
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- ================= QUICK LINKS ================= -->
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#how-it-works">How It Works</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="#help">Help Center</a>
+
+            <a href="login.html">Login</a>
+
+
+        </div>
+
+        <!-- ================= COMPANY ================= -->
+
+        <div class="footer-links">
+
+            <h3>Company</h3>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Support</a>
+
+            <a href="#">Careers</a>
+
+            <a href="#">Blog</a>
+
+            <a href="#">Developers</a>
+
+        </div>
+
+        <!-- ================= SOCIAL ================= -->
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= DIVIDER ================= -->
+
+    <hr>
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <div class="newsletter">
+
+        <div class="newsletter-left">
+
+            <h2>Stay Updated</h2>
+
+            <p>
+                Receive notifications whenever a matching item
+                is reported.
+            </p>
+
+        </div>
+
+        <div class="newsletter-right">
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                id="newsletterEmail"
+            >
+
+            <button id="subscribeBtn">
+
+                Subscribe
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= COPYRIGHT ================= -->
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 FindIt. All Rights Reserved.
+
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">Privacy</a>
+
+            <a href="#">Terms</a>
+
+            <a href="#">Cookies</a>
+
+            <a href="#">Contact</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

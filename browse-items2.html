@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Browse Items | FindIt</title>
+
+    <link rel="stylesheet"
+          href="../css/dashboard1.css">
+
+    <link rel="stylesheet"
+          href="../css/browse-items2.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+         rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <img src="../images/logo3.png"
+             alt="FindIt">
+
+    </div>
+
+    <ul class="menu">
+
+        <li>
+
+            <a href="dashboard1.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+        </li>
+
+        <li class="active">
+
+            <a href="../css/browse-items2.css">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Browse Items
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="report-lost.html">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                Report Lost
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="report-found.html">
+
+                <i class="fa-solid fa-hand-holding"></i>
+
+                Report Found
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="my-reports.html">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                My Reports
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </a>
+
+        </li>
+
+    </ul>
+
+    <button class="logout-btn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+    </button>
+
+</aside>
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+<!-- ================= TOP BAR ================= -->
+
+<header class="topbar">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input type="text"
+               id="mainSearchInput"
+               placeholder="Search by item name, brand, colour or location...">
+
+    </div>
+
+    <div class="top-right">
+
+        <div class="notification"
+             id="notificationBell">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <span>3</span>
+
+        </div>
+
+        <div class="profile-dropdown">
+
+            <div class="profile"
+                 id="profileBtn">
+
+                <img src="../images/avatar.png">
+
+                <div>
+
+                    <h4 id="username">
+
+                        Akshat
+
+                    </h4>
+
+                    <small>
+
+                        User
+
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+            <div class="dropdown-menu"
+                 id="dropdownMenu">
+
+                <a href="#">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    My Reports
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fa-solid fa-circle-question"></i>
+
+                    Help & Support
+
+                </a>
+
+                <hr>
+
+                <a href="#"
+                   class="logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="page-header">
+
+    <div class="page-header-left">
+
+        <span class="page-icon">
+
+            <i class="fa-solid fa-box-open"></i>
+
+        </span>
+
+        <div>
+
+            <h1>
+
+                Browse Lost & Found Items
+
+            </h1>
+
+            <p>
+
+                Search thousands of reported items across your campus.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <button class="primary-btn">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Report Item
+
+    </button>
+
+</section>
+
+<!-- ================= STATS ================= -->
+ <section class="browse-stats">
+
+    <div class="browse-stat">
+
+        <div class="stat-icon blue">
+            <i class="fa-solid fa-box"></i>
+        </div>
+
+        <div>
+
+            <h3>1,248</h3>
+            <p>Total Reports</p>
+
+        </div>
+
+    </div>
+
+    <div class="browse-stat">
+
+        <div class="stat-icon red">
+            <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+
+        <div>
+
+            <h3>683</h3>
+            <p>Lost Items</p>
+
+        </div>
+
+    </div>
+
+    <div class="browse-stat">
+
+        <div class="stat-icon green">
+            <i class="fa-solid fa-hand-holding"></i>
+        </div>
+
+        <div>
+
+            <h3>565</h3>
+            <p>Found Items</p>
+
+        </div>
+
+    </div>
+
+    <div class="browse-stat">
+
+        <div class="stat-icon orange">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div>
+
+            <h3>96%</h3>
+            <p>Recovery Rate</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================================
+                SMART MATCH ALERT
+=================================================== -->
+
+<section class="smart-match">
+
+    <div class="smart-left">
+
+        <div class="match-icon">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+        </div>
+
+        <div>
+
+            <span class="match-label">
+
+                AI SMART MATCH
+
+            </span>
+
+            <h2>
+
+                We found a possible match!
+
+            </h2>
+
+            <p>
+
+                A black leather wallet found near the
+                Central Library closely matches one of your
+                lost reports.
+
+            </p>
+
+            <div class="confidence">
+
+                <div class="confidence-bar">
+
+                    <div class="confidence-fill">
+
+                        93%
+
+                    </div>
+
+                </div>
+
+                <span>
+
+                    93% Match Confidence
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="smart-actions">
+
+        <button class="primary-match">
+
+            <i class="fa-solid fa-eye"></i>
+
+            View Match
+
+        </button>
+
+        <button class="secondary-match">
+
+            Dismiss
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================================
+                FEATURED ITEMS
+=================================================== -->
+
+<section class="featured-items">
+
+    <div class="section-header">
+
+        <div>
+
+            <h2>
+
+                ⭐ Featured Items
+
+            </h2>
+
+            <p>
+
+                Recently reported priority items
+
+            </p>
+
+        </div>
+
+        <div class="slider-buttons">
+
+            <button>
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+            <button>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="featured-grid">
+
+        <div class="featured-card">
+
+            <img src="https://picsum.photos/400/250?1">
+
+            <div class="featured-content">
+
+                <span class="badge lost">
+
+                    LOST
+
+                </span>
+
+                <h3>
+
+                    Apple AirPods Pro
+
+                </h3>
+
+                <p>
+
+                    Near Computer Science Block
+
+                </p>
+
+                <div class="featured-footer">
+
+                    <span>
+
+                        2 hrs ago
+
+                    </span>
+
+                    <button>
+
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="featured-card">
+
+            <img src="https://picsum.photos/400/250?2">
+
+            <div class="featured-content">
+
+                <span class="badge found">
+
+                    FOUND
+
+                </span>
+
+                <h3>
+
+                    Brown Leather Wallet
+
+                </h3>
+
+                <p>
+
+                    Near Library Entrance
+
+                </p>
+
+                <div class="featured-footer">
+
+                    <span>
+
+                        Today
+
+                    </span>
+
+                    <button>
+
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="featured-card">
+
+            <img src="https://picsum.photos/400/250?3">
+
+            <div class="featured-content">
+
+                <span class="badge lost">
+
+                    LOST
+
+                </span>
+
+                <h3>
+
+                    HP Laptop Bag
+
+                </h3>
+
+                <p>
+
+                    Hostel Block A
+
+                </p>
+
+                <div class="featured-footer">
+
+                    <span>
+
+                        Yesterday
+
+                    </span>
+
+                    <button>
+
+                        View
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================================
+                    FILTER BAR
+=================================================== -->
+
+<section class="filter-bar">
+
+    <input
+        type="text"
+        placeholder="Search by item name...">
+
+    <select>
+
+        <option>All Categories</option>
+        <option>Electronics</option>
+        <option>Wallets</option>
+        <option>Bags</option>
+        <option>Documents</option>
+        <option>Keys</option>
+
+    </select>
+
+    <select>
+
+        <option>All Status</option>
+        <option>Lost</option>
+        <option>Found</option>
+
+    </select>
+
+    <select>
+
+        <option>All Locations</option>
+        <option>Library</option>
+        <option>Cafeteria</option>
+        <option>Hostel</option>
+        <option>Academic Block</option>
+
+    </select>
+
+    <button class="filter-btn">
+
+        <i class="fa-solid fa-filter"></i>
+
+        Apply
+
+    </button>
+
+</section>
+
+
+<!-- ===================================================
+                QUICK FILTERS
+=================================================== -->
+
+<div class="quick-filters">
+
+    <button>📱 Electronics</button>
+
+    <button>🎒 Bags</button>
+
+    <button>👛 Wallets</button>
+
+    <button>🪪 ID Cards</button>
+
+    <button>🔑 Keys</button>
+
+    <button>⌚ Watches</button>
+
+</div>
+
+
+<!-- ===================================================
+                RECENT REPORTS
+=================================================== -->
+
+<div class="items-header">
+
+    <h2>
+
+        Recent Reports
+
+    </h2>
+
+    <div class="view-options">
+
+        <button class="active">
+
+            <i class="fa-solid fa-grip"></i>
+
+        </button>
+
+        <button>
+
+            <i class="fa-solid fa-list"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+<section class="items-section">
+
+    <div id="items-list-container">
+
+       <div id="items-list-container" class="items-grid">
+
+    <!-- ================= CARD 1 ================= -->
+
+    <div class="item-card">
+
+        <div class="item-image">
+
+            <img src="https://picsum.photos/400/300?random=21" alt="Wallet">
+
+            <span class="status lost">
+                LOST
+            </span>
+
+            <button class="bookmark-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <span class="match-score">
+                94% Match
+            </span>
+
+        </div>
+
+        <div class="item-body">
+
+            <h3>Black Leather Wallet</h3>
+
+            <p class="item-description">
+                Contains student ID card and ATM cards.
+            </p>
+
+            <div class="item-details">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Central Library
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-clock"></i>
+                    2 hrs ago
+                </span>
+
+            </div>
+
+            <div class="item-footer">
+
+                <span class="reward">
+
+                    💰 Reward ₹500
+
+                </span>
+
+                <button>
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CARD 2 ================= -->
+
+    <div class="item-card">
+
+        <div class="item-image">
+
+            <img src="https://picsum.photos/400/300?random=22" alt="Laptop">
+
+            <span class="status found">
+                FOUND
+            </span>
+
+            <button class="bookmark-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+        </div>
+
+        <div class="item-body">
+
+            <h3>HP Laptop Bag</h3>
+
+            <p class="item-description">
+                Black HP backpack found near Block C.
+            </p>
+
+            <div class="item-details">
+
+                <span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Academic Block
+
+                </span>
+
+                <span>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Today
+
+                </span>
+
+            </div>
+
+            <div class="item-footer">
+
+                <span class="verified">
+
+                    ✓ Verified
+
+                </span>
+
+                <button>
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CARD 3 ================= -->
+
+    <div class="item-card">
+
+        <div class="item-image">
+
+            <img src="https://picsum.photos/400/300?random=23" alt="Bottle">
+
+            <span class="status lost">
+                LOST
+            </span>
+
+            <button class="bookmark-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <span class="match-score">
+
+                81% Match
+
+            </span>
+
+        </div>
+
+        <div class="item-body">
+
+            <h3>Blue Water Bottle</h3>
+
+            <p class="item-description">
+
+                Milton insulated bottle with stickers.
+
+            </p>
+
+            <div class="item-details">
+
+                <span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Cafeteria
+
+                </span>
+
+                <span>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Yesterday
+
+                </span>
+
+            </div>
+
+            <div class="item-footer">
+
+                <span>
+
+                    Lost Item
+
+                </span>
+
+                <button>
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CARD 4 ================= -->
+
+    <div class="item-card">
+
+        <div class="item-image">
+
+            <img src="https://picsum.photos/400/300?random=24" alt="Keys">
+
+            <span class="status found">
+                FOUND
+            </span>
+
+            <button class="bookmark-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+        </div>
+
+        <div class="item-body">
+
+            <h3>Bike Keys</h3>
+
+            <p class="item-description">
+
+                Royal Enfield key with black keychain.
+
+            </p>
+
+            <div class="item-details">
+
+                <span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Parking Area
+
+                </span>
+
+                <span>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    3 hrs ago
+
+                </span>
+
+            </div>
+
+            <div class="item-footer">
+
+                <span class="verified">
+
+                    ✓ Verified
+
+                </span>
+
+                <button>
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CARD 5 ================= -->
+
+    <div class="item-card">
+
+        <div class="item-image">
+
+            <img src="https://picsum.photos/400/300?random=25" alt="Phone">
+
+            <span class="status lost">
+                LOST
+            </span>
+
+            <button class="bookmark-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+        </div>
+
+        <div class="item-body">
+
+            <h3>Samsung Galaxy S24</h3>
+
+            <p class="item-description">
+
+                Black phone with transparent cover.
+
+            </p>
+
+            <div class="item-details">
+
+                <span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Auditorium
+
+                </span>
+
+                <span>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    5 hrs ago
+
+                </span>
+
+            </div>
+
+            <div class="item-footer">
+
+                <span class="reward">
+
+                    💰 Reward ₹2000
+
+                </span>
+
+                <button>
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CARD 6 ================= -->
+
+    <div class="item-card">
+
+        <div class="item-image">
+
+            <img src="https://picsum.photos/400/300?random=26" alt="ID Card">
+
+            <span class="status found">
+                FOUND
+            </span>
+
+            <button class="bookmark-btn">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+        </div>
+
+        <div class="item-body">
+
+            <h3>College ID Card</h3>
+
+            <p class="item-description">
+
+                Found outside Mechanical Department.
+
+            </p>
+
+            <div class="item-details">
+
+                <span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Mechanical Block
+
+                </span>
+
+                <span>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Today
+
+                </span>
+
+            </div>
+
+            <div class="item-footer">
+
+                <span class="verified">
+
+                    ✓ Verified
+
+                </span>
+
+                <button>
+
+                    View Details
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+<!-- ==========================================================
+                    TRENDING CATEGORIES
+=========================================================== -->
+
+<section class="trending-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            🔥 Trending Categories
+
+        </h2>
+
+        <a href="#">
+            View All
+        </a>
+
+    </div>
+
+    <div class="trending-grid">
+
+        <div class="trend-card">
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            <h3>Electronics</h3>
+
+            <span>132 Items</span>
+
+        </div>
+
+        <div class="trend-card">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <h3>Wallets</h3>
+
+            <span>87 Items</span>
+
+        </div>
+
+        <div class="trend-card">
+
+            <i class="fa-solid fa-key"></i>
+
+            <h3>Keys</h3>
+
+            <span>49 Items</span>
+
+        </div>
+
+        <div class="trend-card">
+
+            <i class="fa-solid fa-id-card"></i>
+
+            <h3>ID Cards</h3>
+
+            <span>64 Items</span>
+
+        </div>
+
+        <div class="trend-card">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <h3>Bags</h3>
+
+            <span>103 Items</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+                    RECENTLY VIEWED
+=========================================================== -->
+
+<section class="recent-viewed">
+
+    <div class="section-header">
+
+        <h2>
+
+            👀 Recently Viewed
+
+        </h2>
+
+    </div>
+
+    <div class="recent-grid">
+
+        <div class="recent-item">
+
+            <img src="https://picsum.photos/120/120?random=30">
+
+            <div>
+
+                <h4>Black Wallet</h4>
+
+                <span>Viewed 5 min ago</span>
+
+            </div>
+
+        </div>
+
+        <div class="recent-item">
+
+            <img src="https://picsum.photos/120/120?random=31">
+
+            <div>
+
+                <h4>Samsung Phone</h4>
+
+                <span>Viewed Today</span>
+
+            </div>
+
+        </div>
+
+        <div class="recent-item">
+
+            <img src="https://picsum.photos/120/120?random=32">
+
+            <div>
+
+                <h4>Blue Backpack</h4>
+
+                <span>Viewed Yesterday</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+                    RECENT RECOVERIES
+=========================================================== -->
+
+<section class="recovered-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            🎉 Recently Recovered
+
+        </h2>
+
+        <a href="#">
+            Success Stories
+        </a>
+
+    </div>
+
+    <div class="recovery-list">
+
+        <div class="recovery-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <h3>
+
+                    Wallet Returned Successfully
+
+                </h3>
+
+                <p>
+
+                    Returned within 4 hours after reporting.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="recovery-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <h3>
+
+                    Laptop Recovered
+
+                </h3>
+
+                <p>
+
+                    Matched using AI Smart Match feature.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="recovery-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <h3>
+
+                    Student ID Returned
+
+                </h3>
+
+                <p>
+
+                    Found and claimed the same day.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+                    FINDIT TIPS
+=========================================================== -->
+
+<section class="browse-tips">
+
+    <h2>
+
+        💡 Tips for Better Results
+
+    </h2>
+
+    <div class="tips-grid">
+
+        <div class="tip">
+
+            <i class="fa-solid fa-camera"></i>
+
+            <h4>Add Clear Photos</h4>
+
+            <p>
+                Items with images are recovered much faster.
+            </p>
+
+        </div>
+
+        <div class="tip">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h4>Use Accurate Location</h4>
+
+            <p>
+                Mention where you lost or found the item.
+            </p>
+
+        </div>
+
+        <div class="tip">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h4>Report Quickly</h4>
+
+            <p>
+                Early reports significantly improve recovery chances.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+                    PAGE END
+=========================================================== -->
+
+<script src="../js/dashboard.js"></script>
+
+<script src="../js/browse-items.js"></script>
+
+</main>
+
+</div>
+
+</body>
+
+</html>

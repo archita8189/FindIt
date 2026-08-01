@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In | FindIt</title>
+
+    <link rel="stylesheet" href="../css/login.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+</div>
+
+<header>
+  
+
+
+    <a href="landing.html" class="back-home">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Home
+
+    </a>
+
+</header>
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left-section">
+
+    <!-- <img src="../images/login-illustration.png"
+    class="illustration"> -->
+
+    <div class="content">
+
+        <span class="tag">
+
+            LOST • FOUND • RECOVER
+
+        </span>
+
+        <h1>
+
+            Helping People Reconnect With What Matters Most.
+
+        </h1>
+
+        <p>
+
+            FindIt provides a secure and intelligent platform for
+            reporting, tracking and recovering lost belongings
+            across schools, colleges, offices and organizations.
+
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Secure Reporting
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Smart Search
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Fast Recovery
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-building"></i>
+
+                Organization Ready
+
+            </div>
+
+        </div>
+
+        <div class="stats">
+
+            <div>
+
+                <h2>12K+</h2>
+
+                <span>Recovered Items</span>
+
+            </div>
+
+            <div>
+
+                <h2>250+</h2>
+
+                <span>Organizations</span>
+
+            </div>
+
+            <div>
+
+                <h2>96%</h2>
+
+                <span>Success Rate</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right-section">
+
+<div class="login-card">
+
+ 
+
+<!-- LOGIN FORM -->
+
+<div id="loginForm" class="auth-form active">
+
+    <span class="login-tag">
+        SIGN IN
+    </span>
+
+    <h2>
+        Sign In to FindIt
+    </h2>
+
+    <p>
+        Access your account to report, track and recover
+        lost items securely.
+    </p>
+
+<form id="loginFormElement">
+
+<div class="input-box">
+
+<label>Email Address</label>
+
+<div class="input">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input type="email" placeholder="Enter your email" required>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>Password</label>
+
+<div class="input">
+
+<i class="fa-solid fa-lock"></i>
+
+<input type="password" id="password" placeholder="Enter your password" required>
+
+<i class="fa-solid fa-eye" id="togglePassword"></i>
+
+</div>
+
+</div>
+
+<div class="options">
+
+<label>
+
+<input type="checkbox">
+
+Remember Me
+
+</label>
+
+<a href="#">Forgot Password?</a>
+
+</div>
+
+<button type="submit" class="login-btn">
+
+Sign In
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</form>
+
+<div class="divider">
+
+<span>OR</span>
+
+</div>
+
+<button id="googleLoginBtn" class="google-btn">
+    <img src="../images/google.png" alt="Google">
+    Continue with Google
+</button>
+
+<div class="bottom-text">
+
+Don't have an account?
+
+<a href="#" onclick="showRegister();return false;">
+
+Create an Account
+
+</a>
+
+</div>
+
+</div>
+
+<!-- REGISTER FORM -->
+
+<div id="registerForm" class="auth-form">
+
+<span class="login-tag">
+
+REGISTER
+
+</span>
+
+<h2>Create an Account</h2>
+
+<p>
+
+Join FindIt and start reporting, tracking and recovering lost items.
+
+</p>
+
+<form id="registerFormElement">
+
+<div class="input-box">
+
+<label>Full Name</label>
+
+<div class="input">
+
+<i class="fa-solid fa-user"></i>
+
+<input type="text" placeholder="Enter your full name" required>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>Email Address</label>
+
+<div class="input">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input type="email" placeholder="Enter your email" required>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>Password</label>
+
+<div class="input">
+
+<i class="fa-solid fa-lock"></i>
+
+<input type="password" placeholder="Create password" required>
+
+</div>
+
+</div>
+
+<div class="input-box">
+
+<label>Confirm Password</label>
+
+<div class="input">
+
+<i class="fa-solid fa-lock"></i>
+
+<input type="password" placeholder="Confirm password" required>
+
+</div>
+
+</div>
+
+<button class="login-btn">
+
+Create Account
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+<div class="bottom-text">
+
+Already have an account?
+
+<a href="#" onclick="showLogin();return false;">
+
+Sign In
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
+</div>    
+<script src="../js/login.js"></script>
+
+</body>
+
+</html>
+

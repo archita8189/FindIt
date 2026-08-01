@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | FindIt</title>
+
+    <link rel="stylesheet" href="../css/dashboard1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../images/logo3.png" alt="FindIt">
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+                <a href="../html/dashboard1.html" data-nav="dashboard"><i class="fa-solid fa-house"></i>Dashboard</a>
+            </li>
+            <li>
+                <a href="../html/browse-items2.html" data-nav="browse"><i class="fa-solid fa-magnifying-glass"></i>Browse Items</a>
+            </li>
+            <li>
+                <a href="../html/report-lost.html" data-nav="reports"><i class="fa-solid fa-circle-exclamation"></i>Report Lost</a>
+            </li>
+            <li>
+                <a href="#" data-nav="found"><i class="fa-solid fa-hand-holding"></i>Report Found</a>
+            </li>
+            <li>
+                <a href="#" data-nav="my-reports"><i class="fa-solid fa-folder-open"></i>My Reports</a>
+            </li>
+            <li>
+                <a href="#" data-nav="settings"><i class="fa-solid fa-gear"></i>Settings</a>
+            </li>
+
+        </ul>
+
+        <button class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search lost or found items...">
+            </div>
+
+            <div class="topbar-clock">
+                <span id="currentDate"></span>
+                <span id="liveClock"></span>
+            </div>
+
+            <div class="top-right">
+                <div class="notification" id="notificationBell">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>3</span>
+                </div>
+
+                <div class="profile-dropdown">
+
+                    <div class="profile" id="profileBtn">
+                        <img src="../images/avatar.png" alt="Profile">
+                        <div>
+                            <h4 id="username">Akshat</h4>
+                            <small>User</small>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#"><i class="fa-solid fa-user"></i>My Profile</a>
+                        <a href="#"><i class="fa-solid fa-folder-open"></i>My Reports</a>
+                        <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+                        <a href="#"><i class="fa-solid fa-circle-question"></i>Help & Support</a>
+                        <small id="lastLogin" style="display:block; padding:6px 16px; color:#a1a1aa;"></small>
+                        <hr>
+                        <a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= HERO: welcome text + at-a-glance stats ================= -->
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <h1>👋 Welcome Back, <span id="welcomeName">Akshat</span></h1>
+
+                <p>Manage your lost and found reports easily from one place.</p>
+
+                <div class="welcome-buttons">
+                    <button class="primary">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        Report Lost
+                    </button>
+                    <button class="secondary">Browse Items</button>
+                </div>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon lost"><i class="fa-solid fa-circle-exclamation"></i></div>
+                    <div class="stat-info">
+                        <h3 id="lostCount">0</h3>
+                        <p>Lost Reports</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon found"><i class="fa-solid fa-hand-holding"></i></div>
+                    <div class="stat-info">
+                        <h3 id="foundCount">0</h3>
+                        <p>Found Reports</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon recovered"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="stat-info">
+                        <h3 id="recoveredCount">0</h3>
+                        <p>Recovered</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon pending"><i class="fa-solid fa-clock"></i></div>
+                    <div class="stat-info">
+                        <h3 id="pendingCount">0</h3>
+                        <p>Pending Claims</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= TWO-COLUMN BODY ================= -->
+
+        <div class="content-grid">
+
+            <!-- ---- MAIN COLUMN ---- -->
+            <div class="content-main">
+
+                <div id="match-alert-container"></div>
+
+                <div id="status-timeline-container"></div>
+
+                <section class="recent-reports">
+
+                    <div class="section-header">
+                        <h2>Recent Reports</h2>
+                        <a href="#">View All</a>
+                    </div>
+
+                    <div id="recent-reports-container">
+
+                        <!-- Fallback empty state, shown until renderRecentReports() runs with real data -->
+                        <div class="empty-state">
+
+                            <img src="../images/empty-report.png" alt="No Reports">
+
+                            <h3>No Reports Yet</h3>
+
+                            <p>
+                                You haven't reported any lost or found items yet.
+                                Start by reporting your first item.
+                            </p>
+
+                            <button class="primary">
+                                <i class="fa-solid fa-circle-plus"></i>
+                                Report Lost Item
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Table (Hide this initially, show after backend integration) -->
+                    <!--
+                    <div class="reports-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Blue Backpack</td>
+                                    <td>Bags</td>
+                                    <td>Pending</td>
+                                    <td>20 Jul 2026</td>
+                                    <td><button>View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    -->
+
+                </section>
+
+                <section class="recent-activity">
+
+                    <div class="section-header">
+                        <h2>Recent Activity</h2>
+                    </div>
+
+                    <div id="activityList"></div>
+
+                </section>
+
+                <section class="quick-actions">
+
+                    <div class="section-header">
+                        <h2>Quick Actions</h2>
+                    </div>
+
+                    <div class="action-grid">
+
+                        <div class="action-card">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <h3>Report Lost</h3>
+                            <p>Submit details of a lost item.</p>
+                        </div>
+
+                        <div class="action-card">
+                            <i class="fa-solid fa-hand-holding"></i>
+                            <h3>Report Found</h3>
+                            <p>Help someone recover their belongings.</p>
+                        </div>
+
+                        <div class="action-card">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <h3>Browse Items</h3>
+                            <p>Search all lost & found reports.</p>
+                        </div>
+
+                        <div class="action-card">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <h3>My Reports</h3>
+                            <p>Track the status of your reports.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- ---- RAIL COLUMN ---- -->
+            <div class="content-rail">
+
+                <section class="getting-started">
+
+                    <div class="section-header">
+                        <h2>Getting Started</h2>
+                    </div>
+
+                    <ol class="step-mini-list">
+
+                        <li class="step-mini">
+                            <span class="step-mini-circle">1</span>
+                            <div>
+                                <h4>Report</h4>
+                                <p>Submit a lost or found item with details and images.</p>
+                            </div>
+                        </li>
+
+                        <li class="step-mini">
+                            <span class="step-mini-circle">2</span>
+                            <div>
+                                <h4>Search</h4>
+                                <p>Browse listings or use smart filters to find matches.</p>
+                            </div>
+                        </li>
+
+                        <li class="step-mini">
+                            <span class="step-mini-circle">3</span>
+                            <div>
+                                <h4>Match</h4>
+                                <p>Our system matches items and notifies the right people.</p>
+                            </div>
+                        </li>
+
+                        <li class="step-mini">
+                            <span class="step-mini-circle">4</span>
+                            <div>
+                                <h4>Recover</h4>
+                                <p>Verify ownership and securely claim your item.</p>
+                            </div>
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <section class="notifications" id="notifications">
+
+                    <div class="section-header">
+
+                        <h2>Notifications</h2>
+
+                        <a href="#">View All</a>
+
+                    </div>
+
+                    <div class="notification-list">
+
+                        <div class="notification-card">
+                            <div class="notification-icon success"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="notification-content">
+                                <h4>Welcome to FindIt!</h4>
+                                <p>Your account has been created successfully. Start by reporting your first lost or found item.</p>
+                                <span>Just Now</span>
+                            </div>
+                        </div>
+
+                        <div class="notification-card">
+                            <div class="notification-icon info"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="notification-content">
+                                <h4>Quick Tip</h4>
+                                <p>Add clear images and detailed descriptions to improve your chances of recovery.</p>
+                                <span>Today</span>
+                            </div>
+                        </div>
+
+                        <div class="notification-card">
+                            <div class="notification-icon primary"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="notification-content">
+                                <h4>Stay Secure</h4>
+                                <p>Never share personal information until ownership has been verified through FindIt.</p>
+                                <span>Yesterday</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="dashboard-footer">
+            <p>© 2026 FindIt. Helping people reconnect with what matters most.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+<script src="../js/report-lost.js"></script>
+<script src="../js/report-found.js"></script>
+
+</body>
+
+</html>
